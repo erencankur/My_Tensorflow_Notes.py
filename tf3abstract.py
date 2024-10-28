@@ -10,7 +10,7 @@ from tensorflow.keras.layers import Dense, Activation, Dropout # type: ignore
 from tensorflow.keras.callbacks import EarlyStopping # type: ignore
 from sklearn.metrics import classification_report, confusion_matrix
 
-dataFrame = pd.read_excel("/Users/erencankur/Documents/Software/101/Python101/Py_Libraries/tensorflow101/BTKtensorflow/maliciousornot.xlsx")
+dataFrame = pd.read_excel("maliciousornot.xlsx")
 
 sbn.countplot(x="Type", data=dataFrame)
 plt.show()
