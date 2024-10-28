@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-dataFrame = pd.read_excel("/Users/erencankur/Documents/Software/101/Python101/Py_Libraries/tensorflow101/BTKtensorflow/maliciousornot.xlsx")
+dataFrame = pd.read_excel("maliciousornot.xlsx")
 
 import matplotlib.pyplot as plt
 import seaborn as sbn
