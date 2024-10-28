@@ -1,5 +1,5 @@
 import pandas as pd
-dataFrame = pd.read_excel("/Users/erencankur/Documents/Software/101/Python101/Py_Libraries/tensorflow101/BTKtensorflow/bisiklet_fiyatlari.xlsx")
+dataFrame = pd.read_excel("bisiklet_fiyatlari.xlsx")
 #print(dataFrame)
 #            Fiyat  BisikletOzellik1  BisikletOzellik2
 # 0     807.673876       1749.628226       1749.590668
