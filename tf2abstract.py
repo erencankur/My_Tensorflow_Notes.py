@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import seaborn as sbn
 
-dataFrame = pd.read_excel("/Users/erencankur/Documents/Software/101/Python101/Py_Libraries/tensorflow101/BTKtensorflow/merc.xlsx")
+dataFrame = pd.read_excel("merc.xlsx")
 
 print(dataFrame.isnull().sum())
 
