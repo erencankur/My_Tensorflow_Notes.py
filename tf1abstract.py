@@ -8,7 +8,7 @@ from tensorflow.keras.models import Sequential, load_model # type: ignore
 from tensorflow.keras.layers import Dense # type: ignore
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
-dataFrame = pd.read_excel("/Users/erencankur/Documents/Software/101/Python101/Py_Libraries/tensorflow101/BTKtensorflow/bisiklet_fiyatlari.xlsx")
+dataFrame = pd.read_excel("bisiklet_fiyatlari.xlsx")
 print(dataFrame)
 
 sbn.pairplot(dataFrame)
