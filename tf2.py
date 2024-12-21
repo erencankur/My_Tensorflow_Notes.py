@@ -79,8 +79,8 @@ x_test = scaler.transform(x_test)
 #bn: transform: Bu fonksiyon, daha önce fit_transform ile hesaplanan minimum ve maksimum değerlere göre test verisini ölçekler. Yani fit işlemi sadece eğitim seti ile yapılmışken, test seti de aynı parametrelerle dönüştürülür.
 #rn: Bu önemli bir adımdır, çünkü modelin test setine hiç “görmemiş” olduğu verilere dayanarak tahmin yapması gerekir. Bu yüzden test seti için ayrı bir fit işlemi yapmayız; böylece modelin öğrenme sürecine test verisi dahil olmaz.
 
-from tensorflow.keras.models import Sequential # type: ignore
-from tensorflow.keras.layers import Dense # type: ignore
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
 model = Sequential() #bn: Bu, Keras’ta bir model oluşturmak için kullanılan bir yapıdır. Sequential model demek, katmanların sırayla eklendiği bir model anlamına gelir.
 
