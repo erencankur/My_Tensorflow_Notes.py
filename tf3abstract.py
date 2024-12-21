@@ -2,12 +2,12 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sbn
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
-import tensorflow as tf
-from tensorflow.keras.models import Sequential # type: ignore
-from tensorflow.keras.layers import Dense, Activation, Dropout # type: ignore
-from tensorflow.keras.callbacks import EarlyStopping # type: ignore
 from sklearn.metrics import classification_report, confusion_matrix
 
 dataFrame = pd.read_excel("maliciousornot.xlsx")
