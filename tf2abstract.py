@@ -48,8 +48,8 @@ scaler = MinMaxScaler()
 x_train = scaler.fit_transform(x_train)
 x_test = scaler.transform(x_test)
 
-from tensorflow.keras.models import Sequential # type: ignore
-from tensorflow.keras.layers import Dense # type: ignore
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
 model = Sequential()
 
@@ -79,4 +79,4 @@ plt.show()
 dataFrame.iloc[2]
 yeniArabaSeries = dataFrame.drop("price",axis=1).iloc[2]
 yeniArabaSeries = scaler.transform(yeniArabaSeries.values.reshape(-1,5))
-print(model.predict(yeniArabaSeries)) # [[61581.69]]
+print(model.predict(yeniArabaSeries))
