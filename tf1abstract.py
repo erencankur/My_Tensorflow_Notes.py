@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 import tensorflow as tf
-from tensorflow.keras.models import Sequential, load_model # type: ignore
-from tensorflow.keras.layers import Dense # type: ignore
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.layers import Dense
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 dataFrame = pd.read_excel("bisiklet_fiyatlari.xlsx")
@@ -82,6 +82,6 @@ yeniBisikletOzellikleri = [[1760, 1758]]
 yeniBisikletOzellikleri = scaler.transform(yeniBisikletOzellikleri)
 print(model.predict(yeniBisikletOzellikleri))
 
-model.save("/Users/erencankur/Documents/Software/101/PyLibraries/tensorflow101/BTKtensorflow/bisiklet_modeli.keras")
-sonradanCagirilanModel = load_model("/Users/erencankur/Documents/Software/101/PyLibraries/tensorflow101/BTKtensorflow/bisiklet_modeli.keras")
+model.save("bisiklet_modeli.keras")
+sonradanCagirilanModel = load_model("bisiklet_modeli.keras")
 print(sonradanCagirilanModel.predict(yeniBisikletOzellikleri))
