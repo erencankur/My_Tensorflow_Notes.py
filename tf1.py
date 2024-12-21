@@ -49,8 +49,8 @@ print(x_train)
 print(x_test)
 
 import tensorflow as tf
-from tensorflow.keras.models import Sequential # type: ignore #bn: tf'nin keras API’sinden Sequential sınıfını içe aktarır. Sequential sınıfı, katmanları sırayla ekleyerek oluşturulan bir sinir ağı modelidir.
-from tensorflow.keras.layers import Dense # type: ignore #bn: Keras’tan Dense katmanını içe aktarır. Dense, sinir ağı katmanlarındaki her bir düğümün (nöronun) bir önceki katmandaki tüm düğümlere bağlı olduğu tam bağlantılı (fully connected) bir katman türüdür.
+from tensorflow.keras.models import Sequential #bn: tf'nin keras API’sinden Sequential sınıfını içe aktarır. Sequential sınıfı, katmanları sırayla ekleyerek oluşturulan bir sinir ağı modelidir.
+from tensorflow.keras.layers import Dense #bn: Keras’tan Dense katmanını içe aktarır. Dense, sinir ağı katmanlarındaki her bir düğümün (nöronun) bir önceki katmandaki tüm düğümlere bağlı olduğu tam bağlantılı (fully connected) bir katman türüdür.
 
 model = Sequential() #bn: yeni bir Sequential model nesnesi oluşturulur. Sequential modeli, basit bir katman yığınıdır; yani katmanları sırayla birbirine ekleyerek modelin yapısını oluşturur.
 
@@ -137,7 +137,7 @@ print(model.predict(yeniBisikletOzellikleri)) # [[1705.5579]] #bn: Modelin yeni 
 #bn: model: Daha önce eğitim yapılmış bir makine öğrenimi modelidir.
 #bn: predict(): Modelin yeni verilere dayalı tahminler üretmesini sağlar. Burada yeniBisikletOzellikleri ölçeklendirilmiş veridir ve bu veri modeli tahmin yapması için kullanılır.
 
-from tensorflow.keras.models import load_model # type: ignore
+from tensorflow.keras.models import load_model
 model.save("bisiklet_modeli.keras") #bn: model nesnesini bir dosyaya kaydeder.
 sonradanCagirilanModel = load_model("bisiklet_modeli.keras") #bn: load_model() fonksiyonu, kaydedilmiş modeli bisiklet_modeli.keras dosyasından yükler ve sonradanCagirilanModel değişkenine atar. Bu, modelin yapısını ve ağırlıklarını geri yükler, böylece model tahmin yapmak için kullanılabilir.
 print(sonradanCagirilanModel.predict(yeniBisikletOzellikleri)) # [[1705.5579]] #bn: sonradanCagirilanModel.predict() metodu, modelin tahmin yapmasını sağlar. yeniBisikletOzellikleri girdisini kullanarak model, bu girdiye dayalı tahmin sonuçlarını üretir.
