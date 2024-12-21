@@ -28,9 +28,9 @@ x_train = scaler.transform(x_train) #bn: Eğitim verisi üzerinde ölçekleme i�
 x_test = scaler.transform(x_test) #bn: Test verisi de aynı min-max değerlere göre ölçeklenir
 
 import tensorflow as tf
-from tensorflow.keras.models import Sequential # type: ignore
-from tensorflow.keras.layers import Dense, Activation, Dropout # type: ignore
-from tensorflow.keras.callbacks import EarlyStopping # type: ignore
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.callbacks import EarlyStopping
 
 print(x_train.shape) # (383, 30) #bn: Eğitim veri setinde 383 adet örnek var ve her bir örnek 30 özellikten oluşuyor.
 
