@@ -138,6 +138,6 @@ print(model.predict(yeniBisikletOzellikleri)) # [[1705.5579]] #bn: Modelin yeni 
 #bn: predict(): Modelin yeni verilere dayalı tahminler üretmesini sağlar. Burada yeniBisikletOzellikleri ölçeklendirilmiş veridir ve bu veri modeli tahmin yapması için kullanılır.
 
 from tensorflow.keras.models import load_model # type: ignore
-model.save("/Users/erencankur/Documents/Software/101/PyLibraries/tensorflow101/BTKtensorflow/bisiklet_modeli.keras") #bn: model nesnesini bir dosyaya kaydeder.
-sonradanCagirilanModel = load_model("/Users/erencankur/Documents/Software/101/PyLibraries/tensorflow101/BTKtensorflow/bisiklet_modeli.keras") #bn: load_model() fonksiyonu, kaydedilmiş modeli bisiklet_modeli.keras dosyasından yükler ve sonradanCagirilanModel değişkenine atar. Bu, modelin yapısını ve ağırlıklarını geri yükler, böylece model tahmin yapmak için kullanılabilir.
+model.save("bisiklet_modeli.keras") #bn: model nesnesini bir dosyaya kaydeder.
+sonradanCagirilanModel = load_model("bisiklet_modeli.keras") #bn: load_model() fonksiyonu, kaydedilmiş modeli bisiklet_modeli.keras dosyasından yükler ve sonradanCagirilanModel değişkenine atar. Bu, modelin yapısını ve ağırlıklarını geri yükler, böylece model tahmin yapmak için kullanılabilir.
 print(sonradanCagirilanModel.predict(yeniBisikletOzellikleri)) # [[1705.5579]] #bn: sonradanCagirilanModel.predict() metodu, modelin tahmin yapmasını sağlar. yeniBisikletOzellikleri girdisini kullanarak model, bu girdiye dayalı tahmin sonuçlarını üretir.
